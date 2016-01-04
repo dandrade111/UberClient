@@ -67,13 +67,15 @@ public class MessageHandler {
                 }
                
                 case "chegou_destino":{
-                   //coisas
+                    if((boolean)cmd.result)
+                        ui.jTextArea1.append("[UberServer > UberCliente] : Chegou ao seu destino! Custo da viagem: "+(String)cmd.args.listArgs.get(0)+"€. Obrigado!  \n");
                     break;
                 }
                 
-                case "viagem_atribuída":{
+                case "viagem_atribuida":{
                    if((boolean)cmd.result)
-                        ui.jTextArea1.append("[UberServer > UberCliente] : O seu transporte chegou ao ponto de partida! \n");
+                        ui.jTextArea1.append("[UberServer > UberCliente] : Foi-lhe atribuida uma Viagem. Deve ir buscar o passageiro à posição ("+(String)cmd.args.listArgs.get(0)+","+(String)cmd.args.listArgs.get(1)+") e leva-lo a ("+(String)cmd.args.listArgs.get(2)+","+(String)cmd.args.listArgs.get(3)+")   \n");
+                        ui.jButton6.setEnabled(true);
                     break;
                 }
                 //todos os commandos

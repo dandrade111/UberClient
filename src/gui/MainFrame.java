@@ -251,6 +251,7 @@ public class MainFrame extends javax.swing.JFrame {
                 if( !jTextField1.getText().isEmpty() || !String.valueOf(jPasswordField1.getPassword()).equals("")){
                     Command temp = new Command("login_cliente",cliente.mac, new Object[]{jTextField1.getText(),String.valueOf(jPasswordField1.getPassword())});
                     cliente.send(temp);
+                    System.out.println(jTextField1.getText());
                     cliente.cliente.setCliente(jTextField1.getText());
                     jTextArea1.append("[UberClient] : "+temp.toString()+" \n");
                 }
@@ -399,7 +400,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    public javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
