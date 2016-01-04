@@ -302,7 +302,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Command temp = new Command("at_pickup",cliente.mac,new Object[]{});
+        Command temp = new Command("at_pickup",cliente.mac,new Object[]{cliente.cliente.getCliente()});
             cliente.send(temp);
             jButton7.setEnabled(true);
             jButton6.setEnabled(false);
