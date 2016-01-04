@@ -51,7 +51,7 @@ public class MessageHandler {
                     break;
                 }
                 
-                case "atribuido_condutor":{
+                case "get_viagem":{
                    if((boolean)cmd.result)
                         ui.jTextArea1.append("[UberServer > UberCliente] : Foi-lhe atribuido um condutor, por favor aguarde pelo veículo com a matrícula: "+(String)cmd.args.listArgs.get(0)+", marca: "+(String)cmd.args.listArgs.get(1)+", chegará dentro de aproximadamente "+(String)cmd.args.listArgs.get(2)+" segundos \n");
                      else{
